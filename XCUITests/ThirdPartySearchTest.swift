@@ -16,6 +16,7 @@ class ThirdPartySearchTest: BaseTestCase {
         waitForExistence(app.buttons["customEngineSaveButton"], timeout: 3)
         app.buttons["customEngineSaveButton"].tap()
 
+        waitForExistence(app.navigationBars["Search"].buttons["Settings"], timeout: 3)
         app.navigationBars["Search"].buttons["Settings"].tap()
         app.navigationBars["Settings"].buttons["AppSettingsTableViewController.navigationItem.leftBarButtonItem"].tap()
             
@@ -67,6 +68,11 @@ class ThirdPartySearchTest: BaseTestCase {
 
     func testCustomSearchEngineDeletion() {
         navigator.performAction(Action.AddCustomSearchEngine)
+        waitForExistence(app.buttons["customEngineSaveButton"], timeout: 3)
+        app.buttons["customEngineSaveButton"].tap()
+
+        waitForExistence(app.navigationBars["Search"].buttons["Settings"], timeout: 3)
+
         app.navigationBars["Search"].buttons["Settings"].tap()
         app.navigationBars["Settings"].buttons["AppSettingsTableViewController.navigationItem.leftBarButtonItem"].tap()
         app.textFields["url"].tap()

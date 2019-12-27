@@ -728,7 +728,7 @@ func createScreenGraph(for test: XCTestCase, with app: XCUIApplication) -> MMScr
             
             let tablesQuery = app.tables
             let customengineurlTextView = tablesQuery.textViews["customEngineUrl"]
-            customengineurlTextView.staticTexts["URL (Replace Query with %s)"].tap()
+            sleep(1)
             customengineurlTextView.press(forDuration: 1.0)
             app.staticTexts["Paste"].tap()
         }

@@ -289,7 +289,7 @@ class TabManager: NSObject {
         assert(Thread.isMainThread)
 
         // Take the given configuration. Or if it was nil, take our default configuration for the current browsing mode.
-        let configuration: WKWebViewConfiguration = configuration ?? (isPrivate ? privateConfiguration : self.configuration)
+        let configuration: WKWebViewConfiguration = configuration ?? (isPrivate ? TabManager.makeWebViewConfig(isPrivate: true, blockPopups: true) : self.configuration)
 
         let bvc = BrowserViewController.foregroundBVC()
         let tab = Tab(bvc: bvc, configuration: configuration, isPrivate: isPrivate)

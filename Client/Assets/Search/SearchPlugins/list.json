@@ -267,7 +267,7 @@
     "fr": {
       "default": {
         "visibleDefaultEngines": [
-          "google-b-m", "bing", "ddg", "qwant", "twitter", "wikipedia-fr"
+          "lilo", "google-b-m", "bing", "ddg", "qwant", "twitter", "wikipedia-fr"
         ]
       }
     },
